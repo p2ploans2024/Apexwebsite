@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --paper: #f3f6f4;
+  --paper-elevated: #ffffff;
+  --ink: #15232b;
+  --ink-muted: #5c6b73;
+  --brand: #0f4d4a;
+  --brand-dark: #0a3836;
+  --brand-soft: #e4f1ef;
+  --gold: #a67c32;
+  --line: #d5e0dc;
+  --danger: #9b2c2c;
+  --success: #1f7a4d;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-elevated: var(--paper-elevated);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-soft: var(--brand-soft);
+  --color-gold: var(--gold);
+  --color-line: var(--line);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-source-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-source-serif), ui-serif, Georgia, serif;
+}
+
+::selection {
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+}
+
+.prose-apex {
+  --tw-prose-body: var(--ink);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-links: var(--brand);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-quotes: var(--brand-dark);
+  --tw-prose-quote-borders: var(--brand);
+  --tw-prose-counters: var(--ink-muted);
+  --tw-prose-bullets: var(--brand);
+  --tw-prose-th-borders: var(--line);
+  --tw-prose-td-borders: var(--line);
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
